@@ -61,7 +61,7 @@ public class VoyageController {
         return GenericResponse.success(voyageService.getTotalEarninsgOfVoyage(id), HttpStatus.OK);
     }
 
-    @GetMapping
+    @GetMapping("/getVoyages")
     public GenericResponse<List<VoyageResponse>> getVoyages(@RequestParam String originCity,
                                                             @RequestParam String destinationCity,
                                                             @RequestParam String travelType,

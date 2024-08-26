@@ -76,7 +76,58 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzUxMiJ9.eyJyb2xlcyI6W3siaWQiOjEsInJvbGVOYW1lIjoiVVNFUiJ9LHsiaWQiOjIsInJvbGVOYW1lIjoiQURNSU4ifV0sImlkIjoxLCJzdWIiOiJtZWxpaEBnbWFpbC5jb20iLCJpYXQiOjE3MjQ2ODE1OTAsImV4cCI6MTcyNDc2Nzk5MH0.7th23xVgh-EXp8aHo3pxPgbY8o07aWLb0E0wHQqZ3DMYR_6_OfkW3zLyjRIIORnLSbOq0sAEWOS60EYe1PUc5A",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJyb2xlcyI6W3siaWQiOjEsInJvbGVOYW1lIjoiVVNFUiJ9LHsiaWQiOjIsInJvbGVOYW1lIjoiQURNSU4ifV0sImlkIjoxLCJzdWIiOiJtZWxpaEBnbWFpbC5jb20iLCJpYXQiOjE3MjQ2ODY0OTAsImV4cCI6MTcyNDc3Mjg5MH0.lnx8oInK04hZ8j40Jz5pE9_Ekh-0YrgkTIc4Upl7ivQya-8AUkoGyqBG2_JxxWTqop1QC9PLd32RgAjYAjQNEA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9090/api/v1/voyages/getVoyages?originCity=istanbul&destinationCity=ankara&travelType=PLANE",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"api",
+						"v1",
+						"voyages",
+						"getVoyages"
+					],
+					"query": [
+						{
+							"key": "originCity",
+							"value": "istanbul"
+						},
+						{
+							"key": "destinationCity",
+							"value": "ankara"
+						},
+						{
+							"key": "travelType",
+							"value": "PLANE"
+						},
+						{
+							"key": "voyageDateTime",
+							"value": "2024-08-24",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "voyages",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJyb2xlcyI6W3siaWQiOjEsInJvbGVOYW1lIjoiVVNFUiJ9LHsiaWQiOjIsInJvbGVOYW1lIjoiQURNSU4ifV0sImlkIjoxLCJzdWIiOiJtZWxpaEBnbWFpbC5jb20iLCJpYXQiOjE3MjQ2ODY0OTAsImV4cCI6MTcyNDc3Mjg5MH0.lnx8oInK04hZ8j40Jz5pE9_Ekh-0YrgkTIc4Upl7ivQya-8AUkoGyqBG2_JxxWTqop1QC9PLd32RgAjYAjQNEA",
 							"type": "string"
 						}
 					]

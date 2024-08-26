@@ -33,7 +33,21 @@ public class GatewayConfig {
                         )
                         .uri("lb://user-service"))
 
-                .route("ticket-service", r -> r.path("/api/v1/voyages/**", "/api/v1/bookings/**", "/api/v1/tickets/**")
+                .route("user-service", r -> r.path("/api/v1/users/{email}/roles")
+                        .filters(f -> f
+                                .addRequestHeader("RoleTypes", RoleType.ADMIN.name())
+                                .filter(filter)
+                        )
+                        .uri("lb://user-service"))
+
+                .route("ticket-service", r -> r.path("/api/v1/voyages/getVoyages", "/api/v1/bookings/**", "/api/v1/tickets/**")
+                        .filters(f -> f
+                                .addRequestHeader("RoleTypes", RoleType.USER.name())
+                                .filter(filter)
+                        )
+                        .uri("lb://ticket-service"))
+
+                .route("ticket-service", r -> r.path("/api/v1/voyages/**")
                         .filters(f -> f
                                 .addRequestHeader("RoleTypes", RoleType.ADMIN.name())
                                 .filter(filter)
