@@ -1,7 +1,7 @@
 package com.patika.notificationservice.model.strategy;
-import com.solmaz.notificationservice.model.Notification;
-import com.solmaz.notificationservice.model.enums.NotificationType;
-import com.solmaz.notificationservice.repository.NotificationRepository;
+import com.patika.notificationservice.model.Notification;
+import com.patika.notificationservice.model.enums.NotificationType;
+import com.patika.notificationservice.repository.NotificationRepository;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

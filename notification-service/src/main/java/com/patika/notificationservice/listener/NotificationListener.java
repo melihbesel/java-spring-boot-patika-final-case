@@ -1,13 +1,13 @@
 package com.patika.notificationservice.listener;
 
-import com.solmaz.notificationservice.model.Notification;
-import com.solmaz.notificationservice.model.dto.NotificationRequest;
-import com.solmaz.notificationservice.model.enums.NotificationType;
+import com.patika.notificationservice.model.Notification;
+import com.patika.notificationservice.model.dto.NotificationRequest;
+import com.patika.notificationservice.model.enums.NotificationType;
 
-import com.solmaz.notificationservice.model.strategy.EmailNotificationStrategy;
-import com.solmaz.notificationservice.model.strategy.PushNotificationStrategy;
-import com.solmaz.notificationservice.model.strategy.SmsNotificationStrategy;
-import com.solmaz.notificationservice.service.NotificationService;
+import com.patika.notificationservice.model.strategy.EmailNotificationStrategy;
+import com.patika.notificationservice.model.strategy.PushNotificationStrategy;
+import com.patika.notificationservice.model.strategy.SmsNotificationStrategy;
+import com.patika.notificationservice.service.NotificationService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;

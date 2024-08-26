@@ -1,6 +1,6 @@
 package com.patika.notificationservice.model.dto;
 
-import com.solmaz.notificationservice.model.enums.NotificationType;
+import com.patika.notificationservice.model.enums.NotificationType;
 import lombok.*;
 
 @Getter

@@ -1,7 +1,7 @@
 package com.patika.notificationservice.service;
 
-import com.solmaz.notificationservice.model.Notification;
-import com.solmaz.notificationservice.model.strategy.NotificationStrategy;
+import com.patika.notificationservice.model.Notification;
+import com.patika.notificationservice.model.strategy.NotificationStrategy;
 
 import lombok.*;
 import org.springframework.stereotype.Service;

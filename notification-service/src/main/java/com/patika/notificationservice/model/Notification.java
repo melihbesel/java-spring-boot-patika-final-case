@@ -1,6 +1,6 @@
 package com.patika.notificationservice.model;
 
-import com.solmaz.notificationservice.model.enums.NotificationType;
+import com.patika.notificationservice.model.enums.NotificationType;
 import jakarta.persistence.*;
 import lombok.*;
 import org.springframework.data.annotation.Id;
