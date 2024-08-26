@@ -47,7 +47,8 @@ strateji pattern ile yapılmalıdır
 
 ## Proje Mimarisi
 Aşağıdaki diagramda görüldüğü üzere proje isterleri, güvenlik ve performans gibi kapsamlar düşünülerek mikro servis mimarisi oluşturuldu. 
-Buradaki servisleri diagramın altında birkaç kelime ile açıklaması vardır. 
+Buradaki servisleri diagramın altında birkaç kelime ile açıklaması vardır.
+
 ![project-arch.drawio.png](project-arch.drawio.png)
 
 ### Discovery Service
@@ -104,6 +105,7 @@ exception ve log'ları aramayı sağlar.
 # Ekran Görüntüleri
 ## Gateway API Postman Collection
 [Ticket Service Gateway API.postman_collection.json](Ticket%20Service%20Gateway%20API.postman_collection.json)
+
 ![gateway-api.png](gateway-api.png)
 
 ## Eureka Server
