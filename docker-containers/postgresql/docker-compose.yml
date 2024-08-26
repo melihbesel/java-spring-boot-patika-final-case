@@ -1,0 +1,20 @@
+
+version: "3"
+services:
+  pgvector:
+    container_name: pgvector1
+    ports:
+      - 0.0.0.0:55000:5432/tcp
+    expose:
+      - 5432/tcp
+      - 55000/tcp
+    environment:
+      - POSTGRES_PASSWORD=postgrespw
+      - PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/lib/postgresql/15/bin
+      - GOSU_VERSION=1.16
+      - LANG=en_US.utf8
+      - PG_MAJOR=15
+      - PG_VERSION=15.4-2.pgdg120+1
+      - PGDATA=/var/lib/postgresql/data
+    image: ankane/pgvector:latest
+    command: postgres

@@ -1,0 +1,33 @@
+
+version: "3"
+services:
+  rabbitmq:
+    container_name: rabbitmq1
+    ports:
+      - 0.0.0.0:15672:15672/tcp
+      - 0.0.0.0:5672:5672/tcp
+    expose:
+      - 15671/tcp
+      - 15672/tcp
+      - 15691/tcp
+      - 15692/tcp
+      - 25672/tcp
+      - 4369/tcp
+      - 5671/tcp
+      - 5672/tcp
+    environment:
+      - PATH=/opt/rabbitmq/sbin:/opt/erlang/bin:/opt/openssl/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+      - ERLANG_INSTALL_PATH_PREFIX=/opt/erlang
+      - OPENSSL_INSTALL_PATH_PREFIX=/opt/openssl
+      - RABBITMQ_DATA_DIR=/var/lib/rabbitmq
+      - RABBITMQ_VERSION=3.13.6
+      - RABBITMQ_PGP_KEY_ID=0x0A9AF2115F4687BD29803A206B73A36E6026DFCA
+      - RABBITMQ_HOME=/opt/rabbitmq
+      - HOME=/var/lib/rabbitmq
+      - LANG=C.UTF-8
+      - LANGUAGE=C.UTF-8
+      - LC_ALL=C.UTF-8
+      - RABBITMQ_USER=admin
+      - RABBITMQ_PASSWORD=123456
+    image: rabbitmq:3.13-management
+    command: rabbitmq-server
