@@ -1,0 +1,90 @@
+{
+	"info": {
+		"_postman_id": "d7071e56-a6b2-4178-bfb4-47b6354bbdbf",
+		"name": "Ticket Service Gateway API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10295310"
+	},
+	"item": [
+		{
+			"name": "auth register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"mbesel2005@gmail.com\",\n    \"password\": \"123456\",\n    \"firstname\": \"melih\",\n    \"lastname\": \"beşel\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9090/api/v1/auth/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"api",
+						"v1",
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "voyages",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJyb2xlIjpbeyJpZCI6MSwicm9sZU5hbWUiOiJVU0VSIn0seyJpZCI6Miwicm9sZU5hbWUiOiJBRE1JTiJ9XSwiaWQiOjEsInN1YiI6Im1iZXNlbDIwMDVAZ21haWwuY29tIiwiaWF0IjoxNzI0NTYwNDY5LCJleHAiOjE3MjQ2NDY4Njl9.EfxxjQoz3WQNLy59qhU4Lrn0GL4TZ_-f6mSpfbjom3K0ooCrXQNEo5bwunX_gG22wxPel6aa2HS3Gc1cJ8k3iA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9090/api/v1/voyages?originCity=istanbul&destinationCity=roma&travelType=PLANE&voyageDateTime=2024-08-24",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"api",
+						"v1",
+						"voyages"
+					],
+					"query": [
+						{
+							"key": "originCity",
+							"value": "istanbul"
+						},
+						{
+							"key": "destinationCity",
+							"value": "roma"
+						},
+						{
+							"key": "travelType",
+							"value": "PLANE"
+						},
+						{
+							"key": "voyageDateTime",
+							"value": "2024-08-24"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
