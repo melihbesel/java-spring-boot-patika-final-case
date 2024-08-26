@@ -13,7 +13,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"email\": \"mbesel2005@gmail.com\",\n    \"password\": \"123456\",\n    \"firstname\": \"melih\",\n    \"lastname\": \"beşel\"\n}",
+					"raw": "{\n    \"email\": \"melih@gmail.com\",\n    \"password\": \"123456\",\n    \"firstname\": \"melih\",\n    \"lastname\": \"beşel\",\n    \"userType\": \"INDIVIDUAL\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -38,6 +38,37 @@
 			"response": []
 		},
 		{
+			"name": "auth login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"melih@gmail.com\",\n    \"password\": \"123456\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9090/api/v1/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"api",
+						"v1",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "voyages",
 			"request": {
 				"auth": {
@@ -45,15 +76,24 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzUxMiJ9.eyJyb2xlIjpbeyJpZCI6MSwicm9sZU5hbWUiOiJVU0VSIn0seyJpZCI6Miwicm9sZU5hbWUiOiJBRE1JTiJ9XSwiaWQiOjEsInN1YiI6Im1iZXNlbDIwMDVAZ21haWwuY29tIiwiaWF0IjoxNzI0NTYwNDY5LCJleHAiOjE3MjQ2NDY4Njl9.EfxxjQoz3WQNLy59qhU4Lrn0GL4TZ_-f6mSpfbjom3K0ooCrXQNEo5bwunX_gG22wxPel6aa2HS3Gc1cJ8k3iA",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJyb2xlcyI6W3siaWQiOjEsInJvbGVOYW1lIjoiVVNFUiJ9LHsiaWQiOjIsInJvbGVOYW1lIjoiQURNSU4ifV0sImlkIjoxLCJzdWIiOiJtZWxpaEBnbWFpbC5jb20iLCJpYXQiOjE3MjQ2ODE1OTAsImV4cCI6MTcyNDc2Nzk5MH0.7th23xVgh-EXp8aHo3pxPgbY8o07aWLb0E0wHQqZ3DMYR_6_OfkW3zLyjRIIORnLSbOq0sAEWOS60EYe1PUc5A",
 							"type": "string"
 						}
 					]
 				},
-				"method": "GET",
+				"method": "POST",
 				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"originCity\": \"istanbul\",\n  \"destinationCity\": \"ankara\",\n  \"voyageDateTime\": \"2024-08-26\",\n  \"travelType\": \"PLANE\",\n  \"price\": \"1500\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
 				"url": {
-					"raw": "http://localhost:9090/api/v1/voyages?originCity=istanbul&destinationCity=roma&travelType=PLANE&voyageDateTime=2024-08-24",
+					"raw": "http://localhost:9090/api/v1/voyages",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -63,24 +103,6 @@
 						"api",
 						"v1",
 						"voyages"
-					],
-					"query": [
-						{
-							"key": "originCity",
-							"value": "istanbul"
-						},
-						{
-							"key": "destinationCity",
-							"value": "roma"
-						},
-						{
-							"key": "travelType",
-							"value": "PLANE"
-						},
-						{
-							"key": "voyageDateTime",
-							"value": "2024-08-24"
-						}
 					]
 				}
 			},
