@@ -114,13 +114,13 @@ exception ve log'ları aramayı sağlar.
 ## API Swagger
 ### Auth Service
 ![swagger-auth-service.png](swagger-auth-service.png)
-### Auth Service
+### User Service
 ![swagger-user-service.png](swagger-user-service.png)
-### Auth Service
+### Ticket Service
 ![swagger-ticket-service.png](swagger-ticket-service.png)
-### Auth Service
+### Payment Service
 ![swagger-payment-service.png](swagger-payment-service.png)
-### Auth Service
+### Search Service
 ![swagger-search-service.png](swagger-search-service.png)
 
 
