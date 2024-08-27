@@ -26,16 +26,16 @@ public class GatewayConfig {
                         )
                         .uri("lb://auth-service"))
 
-                .route("user-service", r -> r.path("/api/v1/users/**")
+                .route("user-service", r -> r.path("/api/v1/users/{email}/roles")
                         .filters(f -> f
-                                .addRequestHeader("RoleTypes", RoleType.USER.name())
+                                .addRequestHeader("RoleTypes", RoleType.ADMIN.name())
                                 .filter(filter)
                         )
                         .uri("lb://user-service"))
 
-                .route("user-service", r -> r.path("/api/v1/users/{email}/roles")
+                .route("user-service", r -> r.path("/api/v1/users/**")
                         .filters(f -> f
-                                .addRequestHeader("RoleTypes", RoleType.ADMIN.name())
+                                .addRequestHeader("RoleTypes", RoleType.USER.name())
                                 .filter(filter)
                         )
                         .uri("lb://user-service"))
