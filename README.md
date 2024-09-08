@@ -72,12 +72,12 @@ Bu mikro servis de kullanıcılar oluşturulabilir, düzenlenebilir, silinebilir
 Ayrıca rol atama, düzenle, silme yapılabilir. Veritabanı olarak postgre kullanır. 
 
 ### Ticket Service
-Bu mikros servis projenin ana ürünüdür. Projenin ürün gereksinim ve isterlerinin 
+Bu mikro servis projenin ana ürünüdür. Projenin ürün gereksinim ve isterlerinin 
 olduğu servistir. Sefer ekleme, iptal, çıkarma, rezervasyon yapma, bilet oluşturma gibi
 işlemleri sağlar. Veritabanı olarak postgre kullanır. 
 Ayrıca performans için redis ile cache yapısı kullanır. 
 
-### Ticket Service
+### Payment Service
 Bu mikro servis ticket servisi ile feign client yoluyla konuşur. Senkron olarak ödeme
 işlemlerini gerçekleştirir. Veritabanı olarak postgre kullanır. 
 
